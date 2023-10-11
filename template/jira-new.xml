@@ -9,23 +9,21 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CodeSystem/codesystem-paises" key="CodeSystem-codesystem-paises" name="Códigos de Países"/>
 <artifact deprecated="true" id="CodeSystem/shorthand-code-system" key="shorthand-code-system" name="Shorthand Code System"/>
 <artifact deprecated="true" id="ValueSet/shorthand-instance-tags" key="shorthand-instance-tags" name="Shorthand Instance Tags"/>
+<artifact id="CodeSystem/v2-0203" key="CodeSystem-v2-0203" name="Tipo Identificador"/>
+<artifact id="ValueSet/valueSetTiposDocumentos" key="ValueSet-valueSetTiposDocumentos" name="Tipos de Documentos"/>
+<artifact id="ValueSet/idiomas" key="ValueSet-idiomas" name="ValueSet de Idiomas"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="artifacts" name="Artifacts Summary"/>
-<page key="change_log" name="Change Log"/>
 <page key="change_log" name="Change Log"/>
 <page key="index" name="FHIR Shorthand"/>
-<page key="index" name="FHIR Shorthand"/>
 <page key="languagereference" name="Language Reference"/>
-<page key="languagereference" name="Language Reference"/>
-<page key="overview" name="Overview"/>
 <page key="overview" name="Overview"/>
 <page deprecated="true" key="quickreference" name="Quick Reference"/>
 <page deprecated="true" key="sushi" name="SUSHI"/>
-<page key="toc" name="Table of Contents"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="tutorial" name="Tutorial"/>
 </specification>

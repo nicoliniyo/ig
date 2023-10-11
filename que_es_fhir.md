@@ -1,0 +1,9 @@
+**Que es FHIR?**
+
+En el mundo de la atención médica moderna, la necesidad de compartir información de salud de manera rápida y precisa es fundamental. Imagine un escenario en el que los médicos, hospitales, farmacias y sistemas de salud puedan comunicarse entre sí de manera eficiente, garantizando que los pacientes reciban la atención adecuada en el momento adecuado. Esto es precisamente lo que HL7 FHIR hace posible.
+
+HL7 FHIR, que significa 'Fast Healthcare Interoperability Resources', es un estándar tecnológico diseñado para revolucionar la forma en que los datos de salud se comparten y utilizan. Es como el idioma común que permite a los diferentes sistemas de atención médica hablar entre sí sin problemas, independientemente de la plataforma o el software que utilicen.
+
+FHIR simplifica la vida de los profesionales de la salud y mejora la experiencia de los pacientes al brindar una forma estandarizada y sencilla de acceder y compartir información crítica de salud. Desde los registros médicos electrónicos hasta las recetas de medicamentos y más, FHIR permite que todos estos elementos cruciales se conecten de manera eficiente, garantizando un tratamiento más rápido y preciso.
+
+En este mundo impulsado por la tecnología, HL7 FHIR se convierte en el facilitador esencial para una atención médica más coordinada, segura y centrada en el paciente. A lo largo de esta guía, exploraremos cómo FHIR funciona, por qué es tan importante y cómo puede transformar la forma en que experimentamos la atención médica en la era digital. Bienvenido a un nuevo estándar de salud que realmente impacta: HL7 FHIR.

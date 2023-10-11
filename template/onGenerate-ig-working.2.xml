@@ -14,10 +14,10 @@
    <url value="http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand"/>
    <version value="3.0.0-ballot"/>
    <name value="FHIRShorthand"/>
-   <title value="FHIR CORE Shorthand"/>
+   <title value="FHIR CORE Comunidad Online"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2023-08-18T18:16:07-04:00"/>
+   <date value="2023-10-11T12:00:07-04:00"/>
    <publisher value="HL7 CORE - FHIR"/>
    <contact>
       <telecom>
@@ -42,7 +42,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="5.0.0"/>
+      <version value="5.3.0"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -207,6 +207,14 @@
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
+            <valueString value="apply-wg"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
             <valueString value="active-tables"/>
          </extension>
          <extension url="value">
@@ -360,6 +368,74 @@
          <name value="Other"/>
          <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories."/>
       </grouping>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-codesystem-paises.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/codesystem-paises"/>
+         </reference>
+         <name value="Códigos de Países"/>
+         <description value="Listado de países con codigo numerico de 3 cifras en espanol"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-valueSetTiposDocumentos.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/valueSetTiposDocumentos"/>
+         </reference>
+         <name value="Tipos de Documentos"/>
+         <description value="Tipos de Documentos para identificación según tabla HL7 V3 y CodeSystem local."/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-v2-0203.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/v2-0203"/>
+         </reference>
+         <name value="Tipo Identificador"/>
+         <description value="(IdentifierType) HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON."/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-idiomas.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/idiomas"/>
+         </reference>
+         <name value="ValueSet de Idiomas"/>
+         <description value="This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="toc.html"/>
@@ -534,6 +610,10 @@
       </parameter>
       <parameter>
          <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-wg"/>
          <value value="true"/>
       </parameter>
       <parameter>

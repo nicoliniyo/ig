@@ -1,0 +1,473 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "paises",
+  "url": "http://hl7core.online/fhir/codesystem/paises",
+  "version": "1.0",
+  "name": "Paises",
+  "status": "active",
+  "publisher": "HL7Core",
+  "title": "Códigos de Países ISO 3166-1",
+  "description": "Un CodeSystem que contiene códigos para identificar países según la norma ISO 3166-1.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "4",
+      "display": "Afghanistan",
+      "nombre": "Afghanistan",
+      "code-2": "AF",
+      "code-3": "AFG"
+    },
+    {
+      "code": "8",
+      "display": "Albania",
+      "nombre": "Albania",
+      "code-2": "AL",
+      "code-3": "ALB"
+    },
+    {
+      "code": "12",
+      "display": "Algeria",
+      "nombre": "Algeria",
+      "code-2": "DZ",
+      "code-3": "DZA"
+    },
+    {
+      "code": "20",
+      "display": "Andorra",
+      "nombre": "Andorra",
+      "code-2": "AD",
+      "code-3": "AND"
+    },
+    {
+      "code": "24",
+      "display": "Angola",
+      "nombre": "Angola",
+      "code-2": "AO",
+      "code-3": "AGO"
+    },
+    {
+      "code": "28",
+      "display": "Antigua and Barbuda",
+      "nombre": "Antigua and Barbuda",
+      "code-2": "AG",
+      "code-3": "ATG"
+    },
+    {
+      "code": "32",
+      "display": "Argentina",
+      "nombre": "Argentina",
+      "code-2": "AR",
+      "code-3": "ARG"
+    },
+    {
+      "code": "51",
+      "display": "Armenia",
+      "nombre": "Armenia",
+      "code-2": "AM",
+      "code-3": "ARM"
+    },
+    {
+      "code": "533",
+      "display": "Aruba",
+      "nombre": "Aruba",
+      "code-2": "AW",
+      "code-3": "ABW"
+    },
+    {
+      "code": "36",
+      "display": "Australia",
+      "nombre": "Australia",
+      "code-2": "AU",
+      "code-3": "AUS"
+    },
+    {
+      "code": "40",
+      "display": "Austria",
+      "nombre": "Austria",
+      "code-2": "AT",
+      "code-3": "AUT"
+    },
+    {
+      "code": "31",
+      "display": "Azerbaijan",
+      "nombre": "Azerbaijan",
+      "code-2": "AZ",
+      "code-3": "AZE"
+    },
+
+        {
+          "code": "44",
+          "display": "Bahamas",
+          "nombre": "Bahamas",
+          "code-2": "BS",
+          "code-3": "BHS"
+        },
+        {
+          "code": "48",
+          "display": "Bahrain",
+          "nombre": "Bahrain",
+          "code-2": "BH",
+          "code-3": "BHR"
+        },
+        {
+          "code": "50",
+          "display": "Bangladesh",
+          "nombre": "Bangladesh",
+          "code-2": "BD",
+          "code-3": "BGD"
+        },
+        {
+          "code": "52",
+          "display": "Barbados",
+          "nombre": "Barbados",
+          "code-2": "BB",
+          "code-3": "BRB"
+        },
+        {
+          "code": "112",
+          "display": "Belarus",
+          "nombre": "Belarus",
+          "code-2": "BY",
+          "code-3": "BLR"
+        },
+        {
+          "code": "56",
+          "display": "Belgium",
+          "nombre": "Belgium",
+          "code-2": "BE",
+          "code-3": "BEL"
+        },
+        {
+          "code": "84",
+          "display": "Belize",
+          "nombre": "Belize",
+          "code-2": "BZ",
+          "code-3": "BLZ"
+        },
+        {
+          "code": "204",
+          "display": "Benin",
+          "nombre": "Benin",
+          "code-2": "BJ",
+          "code-3": "BEN"
+        },
+        {
+          "code": "60",
+          "display": "Bermuda",
+          "nombre": "Bermuda",
+          "code-2": "BM",
+          "code-3": "BMU"
+        },
+        {
+          "code": "64",
+          "display": "Bhutan",
+          "nombre": "Bhutan",
+          "code-2": "BT",
+          "code-3": "BTN"
+        },
+        {
+          "code": "68",
+          "display": "Bolivia (Plurinational State of)",
+          "nombre": "Bolivia (Plurinational State of)",
+          "code-2": "BO",
+          "code-3": "BOL"
+        },
+        {
+          "code": "535",
+          "display": "Bonaire, Sint Eustatius and Saba",
+          "nombre": "Bonaire, Sint Eustatius and Saba",
+          "code-2": "BQ",
+          "code-3": "BES"
+        },
+        {
+          "code": "70",
+          "display": "Bosnia and Herzegovina",
+          "nombre": "Bosnia and Herzegovina",
+          "code-2": "BA",
+          "code-3": "BIH"
+        },
+        {
+          "code": "72",
+          "display": "Botswana",
+          "nombre": "Botswana",
+          "code-2": "BW",
+          "code-3": "BWA"
+        },
+        {
+          "code": "76",
+          "display": "Brazil",
+          "nombre": "Brazil",
+          "code-2": "BR",
+          "code-3": "BRA"
+        },
+        {
+          "code": "96",
+          "display": "Brunei Darussalam",
+          "nombre": "Brunei Darussalam",
+          "code-2": "BN",
+          "code-3": "BRN"
+        },
+        {
+          "code": "100",
+          "display": "Bulgaria",
+          "nombre": "Bulgaria",
+          "code-2": "BG",
+          "code-3": "BGR"
+        },
+        {
+          "code": "854",
+          "display": "Burkina Faso",
+          "nombre": "Burkina Faso",
+          "code-2": "BF",
+          "code-3": "BFA"
+        },
+        {
+          "code": "108",
+          "display": "Burundi",
+          "nombre": "Burundi",
+          "code-2": "BI",
+          "code-3": "BDI"
+        },
+
+        {
+          "code": "116",
+          "display": "Cambodia",
+          "nombre": "Cambodia",
+          "code-2": "KH",
+          "code-3": "KHM"
+        },
+        {
+          "code": "120",
+          "display": "Cameroon",
+          "nombre": "Cameroon",
+          "code-2": "CM",
+          "code-3": "CMR"
+        },
+        {
+          "code": "124",
+          "display": "Canada",
+          "nombre": "Canada",
+          "code-2": "CA",
+          "code-3": "CAN"
+        },
+        {
+          "code": "132",
+          "display": "Cabo Verde",
+          "nombre": "Cabo Verde",
+          "code-2": "CV",
+          "code-3": "CPV"
+        },
+        {
+          "code": "136",
+          "display": "Cayman Islands",
+          "nombre": "Cayman Islands",
+          "code-2": "KY",
+          "code-3": "CYM"
+        },
+        {
+          "code": "140",
+          "display": "Central African Republic",
+          "nombre": "Central African Republic",
+          "code-2": "CF",
+          "code-3": "CAF"
+        },
+        {
+          "code": "148",
+          "display": "Chad",
+          "nombre": "Chad",
+          "code-2": "TD",
+          "code-3": "TCD"
+        },
+        {
+          "code": "152",
+          "display": "Chile",
+          "nombre": "Chile",
+          "code-2": "CL",
+          "code-3": "CHL"
+        },
+        {
+          "code": "156",
+          "display": "China",
+          "nombre": "China",
+          "code-2": "CN",
+          "code-3": "CHN"
+        },
+        {
+          "code": "162",
+          "display": "Christmas Island",
+          "nombre": "Christmas Island",
+          "code-2": "CX",
+          "code-3": "CXR"
+        },
+        {
+          "code": "166",
+          "display": "Cocos (Keeling) Islands",
+          "nombre": "Cocos (Keeling) Islands",
+          "code-2": "CC",
+          "code-3": "CCK"
+        },
+        {
+          "code": "170",
+          "display": "Colombia",
+          "nombre": "Colombia",
+          "code-2": "CO",
+          "code-3": "COL"
+        },
+        {
+          "code": "174",
+          "display": "Comoros",
+          "nombre": "Comoros",
+          "code-2": "KM",
+          "code-3": "COM"
+        },
+        {
+          "code": "178",
+          "display": "Congo",
+          "nombre": "Congo",
+          "code-2": "CG",
+          "code-3": "COG"
+        },
+        {
+          "code": "180",
+          "display": "Congo (Democratic Republic of the)",
+          "nombre": "Congo (Democratic Republic of the)",
+          "code-2": "CD",
+          "code-3": "COD"
+        },
+        {
+          "code": "184",
+          "display": "Cook Islands",
+          "nombre": "Cook Islands",
+          "code-2": "CK",
+          "code-3": "COK"
+        },
+        {
+          "code": "188",
+          "display": "Costa Rica",
+          "nombre": "Costa Rica",
+          "code-2": "CR",
+          "code-3": "CRI"
+        },
+        {
+          "code": "384",
+          "display": "Cote d'Ivoire",
+          "nombre": "Cote d'Ivoire",
+          "code-2": "CI",
+          "code-3": "CIV"
+        },
+        {
+          "code": "191",
+          "display": "Croatia",
+          "nombre": "Croatia",
+          "code-2": "HR",
+          "code-3": "HRV"
+        },
+        {
+          "code": "192",
+          "display": "Cuba",
+          "nombre": "Cuba",
+          "code-2": "CU",
+          "code-3": "CUB"
+        },
+        {
+          "code": "531",
+          "display": "Curacao",
+          "nombre": "Curacao",
+          "code-2": "CW",
+          "code-3": "CUW"
+        },
+    {
+      "code": "196",
+      "display": "Cyprus",
+      "nombre": "Cyprus",
+      "code-2": "CY",
+      "code-3": "CYP"
+    },
+    {
+      "code": "203",
+      "display": "Czech Republic",
+      "nombre": "Czech Republic",
+      "code-2": "CZ",
+      "code-3": "CZE"
+    },
+
+        {
+          "code": "208",
+          "display": "Denmark",
+          "nombre": "Denmark",
+          "code-2": "DK",
+          "code-3": "DNK"
+        },
+        {
+          "code": "262",
+          "display": "Djibouti",
+          "nombre": "Djibouti",
+          "code-2": "DJ",
+          "code-3": "DJI"
+        },
+        {
+          "code": "212",
+          "display": "Dominica",
+          "nombre": "Dominica",
+          "code-2": "DM",
+          "code-3": "DMA"
+        },
+        {
+          "code": "214",
+          "display": "Dominican Republic",
+          "nombre": "Dominican Republic",
+          "code-2": "DO",
+          "code-3": "DOM"
+        },
+
+        {
+          "code": "818",
+          "display": "Egipto",
+          "nombre": "Egipto",
+          "code-2": "EG",
+          "code-3": "EGY"
+        },
+        {
+          "code": "222",
+          "display": "El Salvador",
+          "nombre": "El Salvador",
+          "code-2": "SV",
+          "code-3": "SLV"
+        },
+        {
+          "code": "226",
+          "display": "Guinea Ecuatorial",
+          "nombre": "Guinea Ecuatorial",
+          "code-2": "GQ",
+          "code-3": "GNQ"
+        },
+        {
+          "code": "232",
+          "display": "Eritrea",
+          "nombre": "Eritrea",
+          "code-2": "ER",
+          "code-3": "ERI"
+        },
+        {
+          "code": "233",
+          "display": "Estonia",
+          "nombre": "Estonia",
+          "code-2": "EE",
+          "code-3": "EST"
+        },
+        {
+          "code": "231",
+          "display": "Etiopía",
+          "nombre": "Etiopía",
+          "code-2": "ET",
+          "code-3": "ETH"
+        }
+
+
+
+
+
+
+  ]
+}

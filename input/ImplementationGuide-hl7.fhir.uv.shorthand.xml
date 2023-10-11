@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand"/>
   <version value="3.0.0-ballot"/>
   <name value="FHIRShorthand"/>
-  <title value="FHIR CORE Shorthand"/>
+  <title value="FHIR CORE Comunidad Online"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="HL7 CORE - FHIR"/>
@@ -25,6 +25,9 @@
   <packageId value="hl7.fhir.uv.shorthand"/>
   <fhirVersion value="4.0.1"/>
   <definition>
+    <resource>
+      <reference reference="ValueSet/languages"/>
+    </resource>
     <page>
       <page>
         <nameUrl value="index.html"/>

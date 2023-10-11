@@ -128,10 +128,10 @@
    <url value="http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand"/>
    <version value="3.0.0-ballot"/>
    <name value="FHIRShorthand"/>
-   <title value="FHIR CORE Shorthand"/>
+   <title value="FHIR CORE Comunidad Online"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2023-08-18T18:16:07-04:00"/>
+   <date value="2023-10-11T12:00:07-04:00"/>
    <publisher value="HL7 CORE - FHIR"/>
    <contact>
       <telecom>
@@ -156,7 +156,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="5.0.0"/>
+      <version value="5.3.0"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -321,6 +321,14 @@
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
+            <valueString value="apply-wg"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
             <valueString value="active-tables"/>
          </extension>
          <extension url="value">
@@ -379,6 +387,14 @@
       
       
       
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide."/>
+      </grouping>
+      <grouping id="-term-codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide."/>
+      </grouping>
       
       
       
@@ -390,6 +406,117 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-valueSetTiposDocumentos.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/valueSetTiposDocumentos"/>
+         </reference>
+         <name value="Tipos de Documentos"/>
+         <description value="Tipos de Documentos para identificación según tabla HL7 V3 y CodeSystem local."/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-idiomas.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/idiomas"/>
+         </reference>
+         <name value="ValueSet de Idiomas"/>
+         <description value="This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-codesystem-paises.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/codesystem-paises"/>
+         </reference>
+         <name value="Códigos de Países"/>
+         <description value="Listado de países con codigo numerico de 3 cifras en espanol"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-v2-0203.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/v2-0203"/>
+         </reference>
+         <name value="Tipo Identificador"/>
+         <description value="(IdentifierType) HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON."/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="toc.html"/>
@@ -433,6 +560,26 @@
             <nameUrl value="artifacts.html"/>
             <title value="Artifacts Summary"/>
             <generation value="html"/>
+            <page>
+               <nameUrl value="ValueSet-valueSetTiposDocumentos.html"/>
+               <title value="Tipos de Documentos"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-idiomas.html"/>
+               <title value="ValueSet de Idiomas"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-codesystem-paises.html"/>
+               <title value="Códigos de Países"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-v2-0203.html"/>
+               <title value="Tipo Identificador"/>
+               <generation value="generated"/>
+            </page>
          </page>
       </page>
       <parameter>
@@ -572,204 +719,7 @@
          <value value="true"/>
       </parameter>
       <parameter>
-         <code value="active-tables"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="fmm-definition"/>
-         <value value="http://hl7.org/fhir/versions.html#maturity"/>
-      </parameter>
-      <parameter>
-         <code value="propagate-status"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="excludelogbinaryformat"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="tabbed-snapshots"/>
-         <value value="true"/>
-      </parameter>
-      <page>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="toc.html"/>
-         </extension>
-         <nameUrl value="toc.html"/>
-         <title value="Table of Contents"/>
-         <generation value="html"/>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="index.html"/>
-            </extension>
-            <nameUrl value="index.html"/>
-            <title value="FHIR Shorthand"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="overview.html"/>
-            </extension>
-            <nameUrl value="overview.html"/>
-            <title value="Overview"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="reference.html"/>
-            </extension>
-            <nameUrl value="reference.html"/>
-            <title value="Language Reference"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="change_log.html"/>
-            </extension>
-            <nameUrl value="change_log.html"/>
-            <title value="Change Log"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <nameUrl value="artifacts.html"/>
-            <title value="Artifacts Summary"/>
-            <generation value="html"/>
-         </page>
-      </page>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/capabilities"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/examples"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/extensions"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/models"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/operations"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/profiles"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/resources"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/vocabulary"/>
-      </parameter>
-      <parameter>
-         <code value="path-pages"/>
-         <value value="input/pagecontent"/>
-      </parameter>
-      <parameter>
-         <code value="path-pages"/>
-         <value value="input/images"/>
-      </parameter>
-      <parameter>
-         <code value="path-tx-cache"/>
-         <value value="input-cache/txcache"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/testing"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="input/history"/>
-      </parameter>
-      <parameter>
-         <code value="path-resource"/>
-         <value value="fsh-generated/resources"/>
-      </parameter>
-      <parameter>
-         <code value="path-pages"/>
-         <value value="template/config"/>
-      </parameter>
-      <parameter>
-         <code value="releaselabel"/>
-         <value value="ballot"/>
-      </parameter>
-      <parameter>
-         <code value="copyrightyear"/>
-         <value value="2020+"/>
-      </parameter>
-      <parameter>
-         <code value="path-history"/>
-         <value value="http://hl7.org/fhir/uv/shorthand/history.html"/>
-      </parameter>
-      <parameter>
-         <code value="autoload-resources"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="path-liquid"/>
-         <value value="template/liquid"/>
-      </parameter>
-      <parameter>
-         <code value="path-liquid"/>
-         <value value="input/liquid"/>
-      </parameter>
-      <parameter>
-         <code value="path-qa"/>
-         <value value="temp/qa"/>
-      </parameter>
-      <parameter>
-         <code value="path-temp"/>
-         <value value="temp/pages"/>
-      </parameter>
-      <parameter>
-         <code value="path-output"/>
-         <value value="output"/>
-      </parameter>
-      <parameter>
-         <code value="path-suppressed-warnings"/>
-         <value value="input/ignoreWarnings.txt"/>
-      </parameter>
-      <parameter>
-         <code value="template-html"/>
-         <value value="template-page.html"/>
-      </parameter>
-      <parameter>
-         <code value="template-md"/>
-         <value value="template-page-md.html"/>
-      </parameter>
-      <parameter>
-         <code value="apply-contact"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-context"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-copyright"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-jurisdiction"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-license"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-publisher"/>
-         <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="apply-version"/>
+         <code value="apply-wg"/>
          <value value="true"/>
       </parameter>
       <parameter>

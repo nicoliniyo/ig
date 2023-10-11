@@ -1,5 +1,3 @@
-{%include styles.html%}
-
 1. **Introducción a FHIR**
 
     - **¿Qué es FHIR?**: HL7 FHIR (Fast Healthcare Interoperability Resources) es un estándar de interoperabilidad en atención médica diseñado para facilitar el intercambio de información de salud entre sistemas y aplicaciones de forma sencilla y estandarizada.

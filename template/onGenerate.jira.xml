@@ -20,6 +20,18 @@
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
+   <artifact name="Tipos de Documentos"
+             key="ValueSet-valueSetTiposDocumentos"
+             id="ValueSet/valueSetTiposDocumentos"/>
+   <artifact name="ValueSet de Idiomas"
+             key="ValueSet-idiomas"
+             id="ValueSet/idiomas"/>
+   <artifact name="Códigos de Países"
+             key="CodeSystem-codesystem-paises"
+             id="CodeSystem/codesystem-paises"/>
+   <artifact name="Tipo Identificador"
+             key="CodeSystem-v2-0203"
+             id="CodeSystem/v2-0203"/>
    <artifact deprecated="true"
              id="CodeSystem/shorthand-code-system"
              key="shorthand-code-system"
@@ -30,12 +42,6 @@
              name="Shorthand Instance Tags"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
-   <page name="Table of Contents" key="toc"/>
-   <page name="FHIR Shorthand" key="index"/>
-   <page name="Overview" key="overview"/>
-   <page name="Language Reference" key="languagereference"/>
-   <page name="Change Log" key="change_log"/>
-   <page name="Artifacts Summary" key="artifacts"/>
    <page name="Table of Contents" key="toc"/>
    <page name="FHIR Shorthand" key="index"/>
    <page name="Overview" key="overview"/>
