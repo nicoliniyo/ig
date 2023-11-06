@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueSetTiposDocumentos",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url": "https://hl7core.online/fhir/ValueSet/ValueSetTiposDocumentos",
+  "version": "1.8.4",
+  "name": "ValueSetTiposDocumentos",
+  "title": "Tipos de Documentos",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-03T14:04:19.017-04:00",
+  "publisher": "HL7 Core Online",
+  "contact": [
+    {
+      "name": "HL7Core.online",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7core.online"
+        },
+        {
+          "system": "email",
+          "value": "chair@hl7core.online"
+        }
+      ]
+    }
+  ],
+  "description": "Tipos de Documentos para identificación según tabla HL7 V3 y CodeSystem local.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "copyright": "HL7 Core Online",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+      }
+    ]
+  }
+}

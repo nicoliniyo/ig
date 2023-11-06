@@ -1,11 +1,12 @@
 {
-  "name": "hl7.fhir.uv.shorthand",
+  "name": "hl7core.fhir.uv.shorthand",
   "version": "3.0.0-ballot",
-  "canonical": "http://hl7.org/fhir/uv/shorthand",
-  "url": "http://hl7.org/fhir/uv/shorthand",
+  "canonical": "http://hl7core.online/fhir/uv/shorthand",
+  "url": "http://hl7core.online/fhir/uv/shorthand",
   "title": "FHIR Shorthand (FSH)",
   "description": "FHIR Shorthand (FSH) is a domain-specific language (DSL) for defining the content of FHIR Implementation Guides (IG).",
   "dependencies": {
+
   },
   "keywords": [
     "SUSHI",

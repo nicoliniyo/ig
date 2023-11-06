@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               url="http://hl7.org/fhir/uv/shorthand"
+               ciUrl="http://build.fhir.org/ig/HL7/fhir-shorthand"
+               defaultWorkgroup="fhir-i"
+               defaultVersion="2.0.0"
+               xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
+               gitUrl="https://github.com/HL7/fhir-shorthand"
+               ballotUrl="http://hl7.org/fhir/uv/shorthand/2023Sep">
+   <version code="current" url="http://build.fhir.org/ig/HL7/fhir-shorthand"/>
+   <version code="3.0.0-ballot" url="http://hl7.org/fhir/uv/shorthand/2023Sep"/>
+   <version code="2.0.0" url="http://hl7.org/fhir/uv/shorthand/N1"/>
+   <version code="1.2.0"
+            url="http://hl7.org/fhir/uv/shorthand/2021Sep"
+            deprecated="true"/>
+   <version code="1.0.0" url="http://hl7.org/fhir/uv/shorthand/STU1"/>
+   <version code="0.12.0"
+            url="http://hl7.org/fhir/uv/shorthand/2020May"
+            deprecated="true"/>
+   <artifactPageExtension value="-definitions"/>
+   <artifactPageExtension value="-examples"/>
+   <artifactPageExtension value="-mappings"/>
+   <artifact name="Tipos de Documentos"
+             key="ValueSet-valueSetTiposDocumentos"
+             id="ValueSet/valueSetTiposDocumentos"/>
+   <artifact name="ValueSet de Idiomas"
+             key="ValueSet-idiomas"
+             id="ValueSet/idiomas"/>
+   <artifact name="Códigos de Países"
+             key="CodeSystem-codesystem-paises"
+             id="CodeSystem/codesystem-paises"/>
+   <artifact name="Tipo Identificador"
+             key="CodeSystem-v2-0203"
+             id="CodeSystem/v2-0203"/>
+   <artifact deprecated="true"
+             id="CodeSystem/shorthand-code-system"
+             key="shorthand-code-system"
+             name="Shorthand Code System"/>
+   <artifact deprecated="true"
+             id="ValueSet/shorthand-instance-tags"
+             key="shorthand-instance-tags"
+             name="Shorthand Instance Tags"/>
+   <page name="(NA)" key="NA"/>
+   <page name="(many)" key="many"/>
+   <page name="Table of Contents" key="toc"/>
+   <page name="FHIR Shorthand" key="index"/>
+   <page name="Overview" key="overview"/>
+   <page name="Language Reference" key="languagereference"/>
+   <page name="Change Log" key="change_log"/>
+   <page name="Artifacts Summary" key="artifacts"/>
+   <page deprecated="true" key="quickreference" name="Quick Reference"/>
+   <page deprecated="true" key="sushi" name="SUSHI"/>
+   <page deprecated="true" key="tutorial" name="Tutorial"/>
+</specification>

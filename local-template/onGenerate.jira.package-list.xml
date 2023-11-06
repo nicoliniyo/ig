@@ -1,0 +1,20 @@
+<package-list>
+   <package version="current"
+            path="http://build.fhir.org/ig/HL7/fhir-shorthand"
+            status="ci-build"/>
+   <package version="3.0.0-ballot"
+            path="http://hl7.org/fhir/uv/shorthand/2023Sep"
+            status="ballot"/>
+   <package version="2.0.0"
+            path="http://hl7.org/fhir/uv/shorthand/N1"
+            status="normative+trial-use"/>
+   <package version="1.2.0"
+            path="http://hl7.org/fhir/uv/shorthand/2021Sep"
+            status="ballot"/>
+   <package version="1.0.0"
+            path="http://hl7.org/fhir/uv/shorthand/STU1"
+            status="trial-use"/>
+   <package version="0.12.0"
+            path="http://hl7.org/fhir/uv/shorthand/2020May"
+            status="ballot"/>
+</package-list>

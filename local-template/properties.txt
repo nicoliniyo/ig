@@ -1,0 +1,2 @@
+jiraSpecFile:FHIR-shorthand
+packagelisturl:http://hl7.org/fhir/uv/shorthand/package-list.json

@@ -1,0 +1,6 @@
+<publication-request>
+   <package version="3.0.0-ballot"
+            path="http://hl7.org/fhir/uv/shorthand/2023Sep"
+            status="ballot"
+            ci-build=""/>
+</publication-request>

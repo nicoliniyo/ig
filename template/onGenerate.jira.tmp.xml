@@ -61,6 +61,7 @@
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force" deprecated="true"/>
   <workgroup key="vocab" webcode="vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
+  <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
 </workgroups>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/shorthand/2023Sep" ciUrl="http://build.fhir.org/ig/HL7/fhir-shorthand" defaultVersion="2.0.0" defaultWorkgroup="fhir-i" gitUrl="https://github.com/HL7/fhir-shorthand" url="http://hl7.org/fhir/uv/shorthand">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-shorthand"/>
@@ -131,7 +132,7 @@
    <title value="FHIR CORE Comunidad Online"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2023-10-11T12:00:07-04:00"/>
+   <date value="2023-11-06T15:57:34-04:00"/>
    <publisher value="HL7 CORE - FHIR"/>
    <contact>
       <telecom>
