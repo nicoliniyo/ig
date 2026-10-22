@@ -48,5 +48,22 @@
     </xsl:copy>
     <xsl:text>&#xa;</xsl:text>
 	</xsl:template>
+	<xsl:template match="page" priority="10">
+    <xsl:copy>
+      <xsl:for-each select="@*">
+        <xsl:sort select="local-name(.)"/>
+        <xsl:copy-of select="."/>
+      </xsl:for-each>
+      <xsl:if test="otherpage">
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:for-each select="otherpage">
+          <xsl:sort select="@url"/>
+          <xsl:text>  </xsl:text>
+          <xsl:apply-templates select="."/>
+        </xsl:for-each>
+      </xsl:if>
+    </xsl:copy>
+    <xsl:text>&#xa;</xsl:text>
+	</xsl:template>
 	<xsl:template match="text()[normalize-space(.)='']"/>
 </xsl:stylesheet>

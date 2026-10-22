@@ -1,0 +1,61 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "v2-0203",
+  "url": "https://hl7core.online/fhir/CodeSystem/v2-0203",
+  "version": "3.0.0-ballot",
+  "name": "CodeSystemV20203",
+  "title": "Tipo Identificador",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7 CORE - FHIR",
+  "description": "(IdentifierType) HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "MR",
+      "display": "Medical record number",
+      "definition": "An identifier that is unique to a patient within a set of medical records."
+    },
+    {
+      "code": "PPN",
+      "display": "Passport number",
+      "definition": "A unique number assigned to the document affirming that a person is a citizen of the country."
+    },
+    {
+      "code": "NNxxx",
+      "display": "National Person Identifier",
+      "definition": "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code."
+    },
+    {
+      "code": "NNBOL",
+      "display": "Cédula de Identidad Bolivia",
+      "definition": "Identificador nacional de persona para Bolivia."
+    },
+    {
+      "code": "NNCHL",
+      "display": "RUN / Cédula de Identidad Chile",
+      "definition": "Rol Único Nacional de Chile."
+    },
+    {
+      "code": "DL",
+      "display": "Driver's license number",
+      "definition": "Driver's license number."
+    },
+    {
+      "code": "BR",
+      "display": "Birth registry number",
+      "definition": "An identifier unique within the Assigning Authority that is the official legal record of a person's birth."
+    },
+    {
+      "code": "MD",
+      "display": "Medical License number",
+      "definition": "An identifier that is unique to a medical doctor within the jurisdiction of a licensing board."
+    },
+    {
+      "code": "PRN",
+      "display": "Provider number",
+      "definition": "A number that is unique to an individual provider, a provider group or an organization within an Assigning Authority."
+    }
+  ]
+}

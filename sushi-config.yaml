@@ -1,0 +1,35 @@
+id: hl7.fhir.uv.shorthand
+canonical: https://hl7core.online/fhir
+name: FHIRShorthand
+title: "FHIR CORE Comunidad Online - Clínicas, Emergencias y Terapias de Neurodesarrollo"
+description: "Guía de Implementación de HL7 Core Online en FHIR R4 que incluye artefactos base (Países, Documentos, Idiomas, Paciente) y el flujo clínico para visitas médicas generales, emergencias, recetas farmacológicas y prescripción de terapias de neurodesarrollo (TEA, Logopedia, ABA, Son-Rise y Montessori) con codificación dual CIE-10 / CIE-11."
+status: draft
+version: 3.0.0-ballot
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ballot
+publisher:
+  name: HL7 CORE - FHIR
+  url: https://hl7coreonline.web.app
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
+pages:
+  index.md:
+    title: Inicio
+  overview.md:
+    title: Contexto
+  clinica_terapias.md:
+    title: Clínicas, Emergencias y Terapias (TEA)
+  reference.md:
+    title: Referencia del Lenguaje
+  change_log.md:
+    title: Bitácora de Cambios
+
+menu:
+  Inicio: index.html
+  Contexto: overview.html
+  Clínicas y Terapias (TEA): clinica_terapias.html
+  Artefactos: artifacts.html
+  Referencia del Lenguaje: reference.html
+  Quick Reference Card: FSHQuickReference.pdf
+  Bitácora de Cambios: change_log.html

@@ -2,6 +2,9 @@
 input-cache/**
 output/**
 temp/**
+fsh-generated/**
+_pregenerated_json_backup/**
+Requirements-fromNarrative.json
 input-cache/schemas-r5/fhir-single.xsd
 input-cache/schemas-r5/fhir-xhtml.xsd
 input-cache/schemas-r5/xml.xsd

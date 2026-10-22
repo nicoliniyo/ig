@@ -55,6 +55,10 @@
         <tokenfilter>
           <replacestring from="&amp;" to="&amp;amp;"/>
         </tokenfilter>
+        <tokenfilter>
+          <replacestring from="&lt;" to="&amp;lt;"/>
+          <replacestring from="&gt;" to="&amp;gt;"/>
+        </tokenfilter>
       </filterchain>
       <header filtering="no">&lt;json&gt;</header>
       <footer filtering="no">&lt;/json&gt;</footer>
@@ -81,6 +85,7 @@
     <echo file="${file.pubrequest.xml}" message=""/>
   </target>
   <target name="onGenerate.jira.generate" depends="onGenerate.jira.packagelistProcess,onGenerate.jira.packagelistSkip,onGenerate.jira.pubrequestProcess,onGenerate.jira.pubrequestSkip">
+    <echo message="PackageList: ${packagelisturl}" file="${ig.template}/packagelist.txt"/>
     <property name="file.jira.tmp" value="${ig.template}/onGenerate.jira.tmp.xml"/>
     <property name="file.jira.tmp2" value="${ig.template}/onGenerate.jira.tmp2.xml"/>
     <property name="file.jira.tmp3" value="${ig.template}/onGenerate.jira.xml"/>
@@ -112,13 +117,13 @@
     <copy file="${file.jira}" tofile="${ig.root}/${jiraSpecFile}.xml"/>
   </target>
   <target name="onGenerate.jira.check" depends="onGenerate.jira.generate" if="doJira" unless="jiraMatch">
-    <echo file="${ig.template}/ongenerate-validation-jira.json" message='&#x0a;{"severity":"warning","code":"informational","details":{"text":"The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on &apos;template/${name.jiraspec.tmp}&apos; (a normalized view of what is in Github) and &apos;template/${name.jira}&apos; (reflects current IG content)"}}&#x0a;'/>
+    <echo file="${ig.template}/ongenerate-validation-jira.json" message='&#x0a;{"severity":"warning","code":"informational","details":{"text":"The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on &apos;template/${name.jiraspec.tmp}&apos; (a normalized view of what is in Github) and &apos;template/${name.jira}&apos; (reflects current IG content)"}},&#x0a;'/>
   </target>   
   <target name="onGenerate.jira.skip-offline" depends="onGenerate.jira.setup" if="doJira" unless="online">
     <echo message="Skipped checking for revised jira spec file because running off-line"/>
   </target>
   <target name="onGenerate.jira.skip-missing" depends="onGenerate.jira.setup" if="online" unless="doJira">
-    <echo file="${ig.template}/ongenerate-validation-jira.json" message='&#x0a;{"severity":"error","code":"informational","details":{"text":"There is no jira specification file defined with the expected name of ${jiraSpecFile} in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication."}}'/>
+    <echo file="${ig.template}/ongenerate-validation-jira.json" message='&#x0a;{"severity":"error","code":"informational","details":{"text":"There is no jira specification file defined with the expected name of ${jiraSpecFile} in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication."}},'/>
   </target>
   <target name="onGenerate.jira" depends="onGenerate.jira.check,onGenerate.jira.skip-offline,onGenerate.jira.skip-missing" extensionOf="onGenerate.extend"/>
 </project>
