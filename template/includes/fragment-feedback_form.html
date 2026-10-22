@@ -4,7 +4,7 @@
 {% for feedbackEntry in site.data.features.feedback %}
   {% if feedbackEntry.active %}
     {% if feedbackEntry.type == 'googleform' %}
-    <script type="text/javascript">
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/feedback.js">
      /* <![CDATA[ */
         $(':header[id]').each(function() { // apply this to each heading
           var id = $(this).attr('id');

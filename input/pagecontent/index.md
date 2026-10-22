@@ -35,4 +35,4 @@ En el mundo empresarial, las empresas que operan en sectores específicos pueden
 
 En resumen, la falta de estándares gubernamentales, institucionales, organizativos o empresariales no tiene por qué ser un obstáculo insuperable. Las comunidades de expertos y profesionales están demostrando que pueden desempeñar un papel crucial en la creación de estándares basados en la comunidad que promuevan la eficiencia, la interoperabilidad y la colaboración, ayudando así a superar los desafíos de la falta de regulación estatal en diversas áreas. Estos esfuerzos comunitarios pueden empoderar a países, instituciones, organizaciones y empresas para prosperar en la era de la conectividad digital y global.
 
-**[Continue to Overview ->](overview.html)**
+**[Continue to Overview ->](overview.html)** | **[Clínicas, Emergencias y Terapias de Neurodesarrollo (TEA) ->](clinica_terapias.html)**

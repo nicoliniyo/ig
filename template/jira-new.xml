@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/shorthand/2023Sep" ciUrl="http://build.fhir.org/ig/HL7/fhir-shorthand" defaultVersion="2.0.0" defaultWorkgroup="fhir-i" gitUrl="https://github.com/HL7/fhir-shorthand" url="http://hl7.org/fhir/uv/shorthand">
-<version code="current" url="http://build.fhir.org/ig/HL7/fhir-shorthand"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/shorthand/2023Sep" ciUrl="https://build.fhir.org/ig/HL7/fhir-shorthand" defaultVersion="3.0.0" defaultWorkgroup="fhir-i" gitUrl="https://github.com/HL7/fhir-shorthand" url="http://hl7.org/fhir/uv/shorthand">
+<version code="current" url="https://build.fhir.org/ig/HL7/fhir-shorthand"/>
+<version code="3.0.0" url="http://hl7.org/fhir/uv/shorthand/N2"/>
 <version code="3.0.0-ballot" url="http://hl7.org/fhir/uv/shorthand/2023Sep"/>
 <version code="2.0.0" url="http://hl7.org/fhir/uv/shorthand/N1"/>
 <version code="1.2.0" deprecated="true" url="http://hl7.org/fhir/uv/shorthand/2021Sep"/>
@@ -9,19 +10,46 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/ApellidoMaterno" key="StructureDefinition-ApellidoMaterno" name="Apellido Materno"/>
+<artifact id="CodeSystem/cs-terapias-desarrollo" key="CodeSystem-cs-terapias-desarrollo" name="CodeSystem de Terapias de Neurodesarrollo y Métodos Pedagógicos"/>
 <artifact id="CodeSystem/codesystem-paises" key="CodeSystem-codesystem-paises" name="Códigos de Países"/>
+<artifact id="Condition/diag-tea-cie10-cie11" key="Condition-diag-tea-cie10-cie11" name="Ejemplo Condition - Diagnóstico de TEA Dual (CIE-10 F84.0 / CIE-11 6A02.2)"/>
+<artifact id="Condition/diag-lenguaje-cie10-cie11" key="Condition-diag-lenguaje-cie10-cie11" name="Ejemplo Condition - Trastorno del Lenguaje Dual (CIE-10 F80.9 / CIE-11 6A01.2)"/>
+<artifact id="Encounter/visita-emergencia-01" key="Encounter-visita-emergencia-01" name="Ejemplo Encounter - Atención Médica de Emergencia (EMER)"/>
+<artifact id="Encounter/visita-ambulatoria-01" key="Encounter-visita-ambulatoria-01" name="Ejemplo Encounter - Consulta Médica Ambulatoria (AMB)"/>
+<artifact id="MedicationRequest/receta-medicamento-01" key="MedicationRequest-receta-medicamento-01" name="Ejemplo MedicationRequest - Receta Farmacológica con Dosificación"/>
+<artifact id="Organization/centro-terapia-autismo" key="Organization-centro-terapia-autismo" name="Ejemplo Organization - Centro Integral de Neurodesarrollo y Autismo"/>
+<artifact id="Patient/paciente-pediatrico" key="Patient-paciente-pediatrico" name="Ejemplo Patient - Paciente Pediátrico (Carlos Gómez)"/>
+<artifact id="ServiceRequest/orden-terapia-habla" key="ServiceRequest-orden-terapia-habla" name="Ejemplo ServiceRequest - Orden de Logopedia / Terapia del Habla"/>
+<artifact id="ServiceRequest/orden-terapia-aba-montessori" key="ServiceRequest-orden-terapia-aba-montessori" name="Ejemplo ServiceRequest - Orden de Terapia ABA, Son-Rise y Montessori"/>
+<artifact id="StructureDefinition/IdContacto" key="StructureDefinition-IdContacto" name="Identificación del Contacto"/>
+<artifact id="StructureDefinition/idioma" key="StructureDefinition-idioma" name="Idioma"/>
+<artifact id="StructureDefinition/nacionalidad" key="StructureDefinition-nacionalidad" name="Nacionalidad basado en Países"/>
+<artifact id="StructureDefinition/patientgeneric-id" key="StructureDefinition-patientgeneric-id" name="Paciente Genérico"/>
+<artifact id="StructureDefinition/patient-mothersMaidenName" key="StructureDefinition-patient-mothersMaidenName" name="Patient Mother's Maiden Name"/>
+<artifact id="StructureDefinition/PerfilConditionCieDual" key="StructureDefinition-PerfilConditionCieDual" name="Perfil Condition - Diagnóstico Dual CIE-10 / CIE-11"/>
+<artifact id="StructureDefinition/PerfilEncounterAtencion" key="StructureDefinition-PerfilEncounterAtencion" name="Perfil Encounter - Atención Ambulatoria y Emergencias"/>
+<artifact id="StructureDefinition/PerfilMedicationRequestDosis" key="StructureDefinition-PerfilMedicationRequestDosis" name="Perfil MedicationRequest - Prescripción y Dosificación"/>
+<artifact id="StructureDefinition/PerfilOrganizationClinica" key="StructureDefinition-PerfilOrganizationClinica" name="Perfil Organization - Institución Clínica y Centro Terapéutico"/>
+<artifact id="StructureDefinition/PerfilServiceRequestTerapias" key="StructureDefinition-PerfilServiceRequestTerapias" name="Perfil ServiceRequest - Terapias Neuroconductuales y Lenguaje"/>
 <artifact deprecated="true" id="CodeSystem/shorthand-code-system" key="shorthand-code-system" name="Shorthand Code System"/>
 <artifact deprecated="true" id="ValueSet/shorthand-instance-tags" key="shorthand-instance-tags" name="Shorthand Instance Tags"/>
 <artifact id="CodeSystem/v2-0203" key="CodeSystem-v2-0203" name="Tipo Identificador"/>
+<artifact id="StructureDefinition/tipo-documento" key="StructureDefinition-tipo-documento" name="Tipo de Documento de Identidad"/>
 <artifact id="ValueSet/valueSetTiposDocumentos" key="ValueSet-valueSetTiposDocumentos" name="Tipos de Documentos"/>
+<artifact id="ValueSet/ValueSetTerapiasNeurodesarrollo" key="ValueSet-ValueSetTerapiasNeurodesarrollo" name="ValueSet - Catálogo de Terapias de Desarrollo"/>
+<artifact id="ValueSet/vs-encounter-class-atencion" key="ValueSet-vs-encounter-class-atencion" name="ValueSet - Clases de Encuentro Médico (AMB / EMER)"/>
+<artifact id="ValueSet/vs-cie-autismo-lenguaje" key="ValueSet-vs-cie-autismo-lenguaje" name="ValueSet - Códigos CIE para TEA y Alteraciones del Lenguaje"/>
 <artifact id="ValueSet/idiomas" key="ValueSet-idiomas" name="ValueSet de Idiomas"/>
+<artifact id="ValueSet/valueset-paises" key="ValueSet-valueset-paises" name="ValueSet de Países ISO 3166-1"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="change_log" name="Change Log"/>
-<page key="index" name="FHIR Shorthand"/>
+<page key="clinica_terapias" name="Clínicas, Emergencias y Terapias (TEA)"/>
+<page key="overview" name="Contexto"/>
+<page key="index" name="Inicio"/>
 <page key="languagereference" name="Language Reference"/>
-<page key="overview" name="Overview"/>
 <page deprecated="true" key="quickreference" name="Quick Reference"/>
 <page deprecated="true" key="sushi" name="SUSHI"/>
 <page key="toc" name="Table of Contents"/>
