@@ -26,7 +26,7 @@
    <title value="FHIR CORE Comunidad Online"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2026-10-21T15:40:02-04:00"/>
+   <date value="2026-10-23T10:07:55-04:00"/>
    <publisher value="HL7 CORE - FHIR"/>
    <contact>
       <telecom>
@@ -179,6 +179,8 @@
       
       
       
+      
+      
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -194,6 +196,24 @@
          </reference>
          <name value="Paciente Genérico"/>
          <description value="Perfil de Paciente Genérico de HL7 Core Online que incluye nacionalidad, tipo de documento, apellido materno e idioma."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-PerfilBundleRegistroIntegral.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/PerfilBundleRegistroIntegral"/>
+         </reference>
+         <name value="Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"/>
+         <description value="Perfil consolidador de tipo Bundle (transaction) que agrupa y registra en una sola estructura Organization, Patient, Encounter, Condition CIE-10/CIE-11, MedicationRequest y ServiceRequest."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -561,6 +581,24 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-bundle-registro-integral-01.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/bundle-registro-integral-01"/>
+         </reference>
+         <name value="Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"/>
+         <description value="Bundle transaccional que consolida todos los recursos de ejemplo de la Guía de Implementación en una sola operación de registro."/>
+         <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/PerfilBundleRegistroIntegral"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="Condition"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -809,6 +847,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-PerfilBundleRegistroIntegral.html"/>
+               <title value="Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-nacionalidad.html"/>
                <title value="Nacionalidad basado en Países"/>
                <generation value="generated"/>
@@ -926,6 +969,11 @@
             <page>
                <nameUrl value="ServiceRequest-orden-terapia-aba-montessori.html"/>
                <title value="Ejemplo ServiceRequest - Orden de Terapia ABA, Son-Rise y Montessori"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-bundle-registro-integral-01.html"/>
+               <title value="Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"/>
                <generation value="generated"/>
             </page>
          </page>

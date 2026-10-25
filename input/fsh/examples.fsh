@@ -285,3 +285,62 @@ Description: "Orden clínica para intervención conductual aplicada (ABA) combin
 * performer[=].display = "Centro Integral de Neurodesarrollo y Autismo"
 * reasonReference[0].reference = "Condition/diag-tea-cie10-cie11"
 * reasonReference[=].display = "TEA (CIE-10 F84.0 / CIE-11 6A02.2)"
+
+// ============================================================================
+// 7. BUNDLE CONSOLIDADO DE REGISTRO INTEGRAL (PerfilBundleRegistroIntegral)
+// ============================================================================
+Instance: bundle-registro-integral-01
+InstanceOf: PerfilBundleRegistroIntegral
+Usage: #example
+Title: "Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"
+Description: "Bundle transaccional que consolida todos los recursos de ejemplo de la Guía de Implementación (Organization, Patient, Condition CIE-10/CIE-11, Encounter AMB y EMER, MedicationRequest y ServiceRequest de terapias) en una sola operación de registro."
+* identifier.system = "https://hl7core.online/fhir/bundle-identifier"
+* identifier.value = "REG-INTEGRAL-2026-0001"
+* type = #transaction
+* timestamp = "2026-10-21T19:00:00-04:00"
+
+* entry[organizacion][0].fullUrl = "https://hl7core.online/fhir/Organization/centro-terapia-autismo"
+* entry[organizacion][=].resource = centro-terapia-autismo
+* entry[organizacion][=].request.method = #PUT
+* entry[organizacion][=].request.url = "Organization/centro-terapia-autismo"
+
+* entry[paciente].fullUrl = "https://hl7core.online/fhir/Patient/paciente-pediatrico"
+* entry[paciente].resource = paciente-pediatrico
+* entry[paciente].request.method = #PUT
+* entry[paciente].request.url = "Patient/paciente-pediatrico"
+
+* entry[diagnostico][0].fullUrl = "https://hl7core.online/fhir/Condition/diag-tea-cie10-cie11"
+* entry[diagnostico][=].resource = diag-tea-cie10-cie11
+* entry[diagnostico][=].request.method = #PUT
+* entry[diagnostico][=].request.url = "Condition/diag-tea-cie10-cie11"
+
+* entry[diagnostico][+].fullUrl = "https://hl7core.online/fhir/Condition/diag-lenguaje-cie10-cie11"
+* entry[diagnostico][=].resource = diag-lenguaje-cie10-cie11
+* entry[diagnostico][=].request.method = #PUT
+* entry[diagnostico][=].request.url = "Condition/diag-lenguaje-cie10-cie11"
+
+* entry[encuentro][0].fullUrl = "https://hl7core.online/fhir/Encounter/visita-ambulatoria-01"
+* entry[encuentro][=].resource = visita-ambulatoria-01
+* entry[encuentro][=].request.method = #PUT
+* entry[encuentro][=].request.url = "Encounter/visita-ambulatoria-01"
+
+* entry[encuentro][+].fullUrl = "https://hl7core.online/fhir/Encounter/visita-emergencia-01"
+* entry[encuentro][=].resource = visita-emergencia-01
+* entry[encuentro][=].request.method = #PUT
+* entry[encuentro][=].request.url = "Encounter/visita-emergencia-01"
+
+* entry[recetaMedicamento][0].fullUrl = "https://hl7core.online/fhir/MedicationRequest/receta-medicamento-01"
+* entry[recetaMedicamento][=].resource = receta-medicamento-01
+* entry[recetaMedicamento][=].request.method = #PUT
+* entry[recetaMedicamento][=].request.url = "MedicationRequest/receta-medicamento-01"
+
+* entry[ordenTerapia][0].fullUrl = "https://hl7core.online/fhir/ServiceRequest/orden-terapia-habla"
+* entry[ordenTerapia][=].resource = orden-terapia-habla
+* entry[ordenTerapia][=].request.method = #PUT
+* entry[ordenTerapia][=].request.url = "ServiceRequest/orden-terapia-habla"
+
+* entry[ordenTerapia][+].fullUrl = "https://hl7core.online/fhir/ServiceRequest/orden-terapia-aba-montessori"
+* entry[ordenTerapia][=].resource = orden-terapia-aba-montessori
+* entry[ordenTerapia][=].request.method = #PUT
+* entry[ordenTerapia][=].request.url = "ServiceRequest/orden-terapia-aba-montessori"
+

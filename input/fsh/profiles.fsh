@@ -200,3 +200,71 @@ Description: "Perfil para prescribir sesiones terapéuticas especializadas no fa
 * reasonReference 1..* MS
 * reasonReference only Reference(PerfilConditionCieDual or Condition)
 * reasonReference ^short = "Vinculación obligatoria al diagnóstico CIE-10 / CIE-11 que justifica la terapia"
+
+// ============================================================================
+// F. PERFIL CONSOLIDADOR DE REGISTRO INTEGRAL (Bundle Transaction)
+// ============================================================================
+Profile: PerfilBundleRegistroIntegral
+Parent: Bundle
+Id: PerfilBundleRegistroIntegral
+Title: "Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"
+Description: "Perfil consolidador de tipo Bundle (transaction) que agrupa y registra en una sola estructura la institución clínica (Organization), el paciente (Patient), las visitas médicas y de emergencia (Encounter), los diagnósticos con codificación dual CIE-10/CIE-11 (Condition), las prescripciones farmacológicas (MedicationRequest) y las órdenes de terapias de neurodesarrollo (ServiceRequest)."
+* ^url = "https://hl7core.online/fhir/StructureDefinition/PerfilBundleRegistroIntegral"
+* ^version = "3.0.0-ballot"
+* ^status = #active
+* ^publisher = "HL7 CORE - FHIR"
+* identifier 0..1 MS
+* identifier ^short = "Identificador único del paquete o transacción clínica"
+* type 1..1 MS
+* type = #transaction (exactly)
+* type ^short = "Bundle transaccional para registro simultáneo de todos los recursos clínicos y administrativos"
+* timestamp 0..1 MS
+* timestamp ^short = "Fecha y hora de generación del paquete de registro integral"
+* entry 1..* MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing de entradas según cada perfil clínico y administrativo de la Guía de Implementación"
+* entry.fullUrl 1..1 MS
+* entry.resource 1..1 MS
+* entry.request 1..1 MS
+* entry.request.method 1..1 MS
+* entry.request.url 1..1 MS
+* entry contains
+    organizacion 1..* MS and
+    paciente 1..1 MS and
+    encuentro 1..* MS and
+    diagnostico 1..* MS and
+    recetaMedicamento 0..* MS and
+    ordenTerapia 0..* MS
+
+* entry[organizacion] ^short = "Registro de la institución clínica o centro terapéutico (PerfilOrganizationClinica)"
+* entry[organizacion].resource 1..1 MS
+* entry[organizacion].resource only PerfilOrganizationClinica
+* entry[organizacion].request 1..1 MS
+
+* entry[paciente] ^short = "Registro del paciente sujeto de atención (PacienteGenerico)"
+* entry[paciente].resource 1..1 MS
+* entry[paciente].resource only PacienteGenerico
+* entry[paciente].request 1..1 MS
+
+* entry[encuentro] ^short = "Registro de visitas médicas ambulatorias (AMB) y de emergencia (EMER) (PerfilEncounterAtencion)"
+* entry[encuentro].resource 1..1 MS
+* entry[encuentro].resource only PerfilEncounterAtencion
+* entry[encuentro].request 1..1 MS
+
+* entry[diagnostico] ^short = "Registro de diagnósticos con codificación dual CIE-10 / CIE-11 (PerfilConditionCieDual)"
+* entry[diagnostico].resource 1..1 MS
+* entry[diagnostico].resource only PerfilConditionCieDual
+* entry[diagnostico].request 1..1 MS
+
+* entry[recetaMedicamento] ^short = "Registro de prescripciones farmacológicas y dosificación (PerfilMedicationRequestDosis)"
+* entry[recetaMedicamento].resource 1..1 MS
+* entry[recetaMedicamento].resource only PerfilMedicationRequestDosis
+* entry[recetaMedicamento].request 1..1 MS
+
+* entry[ordenTerapia] ^short = "Registro de órdenes de terapias de neurodesarrollo y lenguaje (PerfilServiceRequestTerapias)"
+* entry[ordenTerapia].resource 1..1 MS
+* entry[ordenTerapia].resource only PerfilServiceRequestTerapias
+* entry[ordenTerapia].request 1..1 MS
+

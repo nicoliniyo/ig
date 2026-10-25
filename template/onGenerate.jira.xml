@@ -25,6 +25,9 @@
    <artifact name="Paciente Genérico"
              key="StructureDefinition-patientgeneric-id"
              id="StructureDefinition/patientgeneric-id"/>
+   <artifact name="Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"
+             key="StructureDefinition-PerfilBundleRegistroIntegral"
+             id="StructureDefinition/PerfilBundleRegistroIntegral"/>
    <artifact name="Perfil Condition - Diagnóstico Dual CIE-10 / CIE-11"
              key="StructureDefinition-PerfilConditionCieDual"
              id="StructureDefinition/PerfilConditionCieDual"/>
@@ -85,6 +88,9 @@
    <artifact name="Tipo Identificador"
              key="CodeSystem-v2-0203"
              id="CodeSystem/v2-0203"/>
+   <artifact name="Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"
+             key="Bundle-bundle-registro-integral-01"
+             id="Bundle/bundle-registro-integral-01"/>
    <artifact name="Ejemplo Condition - Diagnóstico de TEA Dual (CIE-10 F84.0 / CIE-11 6A02.2)"
              key="Condition-diag-tea-cie10-cie11"
              id="Condition/diag-tea-cie10-cie11"/>

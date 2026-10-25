@@ -74,6 +74,14 @@
       <description value="Perfil para prescribir sesiones terapéuticas especializadas (Logopedia, ABA, Programa Son-Rise y estimulación Montessori)."/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/PerfilBundleRegistroIntegral"/>
+      </reference>
+      <name value="Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"/>
+      <description value="Perfil consolidador de tipo Bundle (transaction) que agrupa y registra en una sola estructura Organization, Patient, Encounter, Condition CIE-10/CIE-11, MedicationRequest y ServiceRequest."/>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- Extensiones -->
     <resource>
@@ -263,6 +271,14 @@
       <name value="Ejemplo ServiceRequest - Orden de Terapia ABA, Son-Rise y Montessori"/>
       <description value="Orden clínica para intervención conductual aplicada (ABA), Programa Son-Rise y estimulación sensorial Montessori."/>
       <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/PerfilServiceRequestTerapias"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/bundle-registro-integral-01"/>
+      </reference>
+      <name value="Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"/>
+      <description value="Bundle transaccional que consolida todos los recursos de ejemplo de la Guía de Implementación en una sola operación de registro."/>
+      <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/PerfilBundleRegistroIntegral"/>
     </resource>
 
     <!-- Páginas de Documentación -->

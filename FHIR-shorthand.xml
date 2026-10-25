@@ -13,6 +13,7 @@
 <artifact id="StructureDefinition/ApellidoMaterno" key="StructureDefinition-ApellidoMaterno" name="Apellido Materno"/>
 <artifact id="CodeSystem/cs-terapias-desarrollo" key="CodeSystem-cs-terapias-desarrollo" name="CodeSystem de Terapias de Neurodesarrollo y Métodos Pedagógicos"/>
 <artifact id="CodeSystem/codesystem-paises" key="CodeSystem-codesystem-paises" name="Códigos de Países"/>
+<artifact id="Bundle/bundle-registro-integral-01" key="Bundle-bundle-registro-integral-01" name="Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"/>
 <artifact id="Condition/diag-tea-cie10-cie11" key="Condition-diag-tea-cie10-cie11" name="Ejemplo Condition - Diagnóstico de TEA Dual (CIE-10 F84.0 / CIE-11 6A02.2)"/>
 <artifact id="Condition/diag-lenguaje-cie10-cie11" key="Condition-diag-lenguaje-cie10-cie11" name="Ejemplo Condition - Trastorno del Lenguaje Dual (CIE-10 F80.9 / CIE-11 6A01.2)"/>
 <artifact id="Encounter/visita-emergencia-01" key="Encounter-visita-emergencia-01" name="Ejemplo Encounter - Atención Médica de Emergencia (EMER)"/>
@@ -27,6 +28,7 @@
 <artifact id="StructureDefinition/nacionalidad" key="StructureDefinition-nacionalidad" name="Nacionalidad basado en Países"/>
 <artifact id="StructureDefinition/patientgeneric-id" key="StructureDefinition-patientgeneric-id" name="Paciente Genérico"/>
 <artifact id="StructureDefinition/patient-mothersMaidenName" key="StructureDefinition-patient-mothersMaidenName" name="Patient Mother's Maiden Name"/>
+<artifact id="StructureDefinition/PerfilBundleRegistroIntegral" key="StructureDefinition-PerfilBundleRegistroIntegral" name="Perfil Bundle - Registro Integral de Atención Clínica y Neurodesarrollo"/>
 <artifact id="StructureDefinition/PerfilConditionCieDual" key="StructureDefinition-PerfilConditionCieDual" name="Perfil Condition - Diagnóstico Dual CIE-10 / CIE-11"/>
 <artifact id="StructureDefinition/PerfilEncounterAtencion" key="StructureDefinition-PerfilEncounterAtencion" name="Perfil Encounter - Atención Ambulatoria y Emergencias"/>
 <artifact id="StructureDefinition/PerfilMedicationRequestDosis" key="StructureDefinition-PerfilMedicationRequestDosis" name="Perfil MedicationRequest - Prescripción y Dosificación"/>

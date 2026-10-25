@@ -82,7 +82,20 @@ Las terapias del habla/logopedia, intervención conductual aplicada (ABA), el Pr
 
 ---
 
-### 6. Índice de Artefactos y Ejemplos Incluidos
+### 6. Consolidación y Registro Transaccional Integral (`Bundle`)
+
+El perfil [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegistroIntegral.html) (`type = #transaction`) consolida todos los perfiles de la Guía de Implementación en un solo paquete transaccional mediante *slicing* por perfil sobre `Bundle.entry.resource`:
+
+- **`entry[organizacion]`** (`1..*`): Institución clínica o centro terapéutico ([`PerfilOrganizationClinica`](StructureDefinition-PerfilOrganizationClinica.html)).
+- **`entry[paciente]`** (`1..1`): Paciente sujeto de atención ([`PacienteGenerico`](StructureDefinition-patientgeneric-id.html)).
+- **`entry[encuentro]`** (`1..*`): Consultas médicas ambulatorias (`AMB`) y atenciones de emergencia (`EMER`) ([`PerfilEncounterAtencion`](StructureDefinition-PerfilEncounterAtencion.html)).
+- **`entry[diagnostico]`** (`1..*`): Diagnósticos con codificación dual obligatoria CIE-10 y CIE-11 ([`PerfilConditionCieDual`](StructureDefinition-PerfilConditionCieDual.html)).
+- **`entry[recetaMedicamento]`** (`0..*`): Prescripciones farmacológicas y dosificación ([`PerfilMedicationRequestDosis`](StructureDefinition-PerfilMedicationRequestDosis.html)).
+- **`entry[ordenTerapia]`** (`0..*`): Solicitudes de terapias de neurodesarrollo y lenguaje ([`PerfilServiceRequestTerapias`](StructureDefinition-PerfilServiceRequestTerapias.html)).
+
+---
+
+### 7. Índice de Artefactos y Ejemplos Incluidos
 
 #### Perfiles (`StructureDefinition`)
 - [`PacienteGenerico`](StructureDefinition-patientgeneric-id.html): Perfil de Paciente de HL7 Core Online.
@@ -91,6 +104,7 @@ Las terapias del habla/logopedia, intervención conductual aplicada (ABA), el Pr
 - [`PerfilConditionCieDual`](StructureDefinition-PerfilConditionCieDual.html): Perfil de Diagnóstico con Codificación Dual CIE-10 / CIE-11.
 - [`PerfilMedicationRequestDosis`](StructureDefinition-PerfilMedicationRequestDosis.html): Perfil de Receta Médica y Dosificación.
 - [`PerfilServiceRequestTerapias`](StructureDefinition-PerfilServiceRequestTerapias.html): Perfil de Orden de Terapias de Neurodesarrollo y Lenguaje.
+- [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegistroIntegral.html): Perfil Bundle Transaccional de Registro Integral Consolidado.
 
 #### Extensiones (`StructureDefinition`)
 - [`Nacionalidad`](StructureDefinition-nacionalidad.html) (`https://hl7core.online/fhir/StructureDefinition/nacionalidad`)
@@ -108,6 +122,7 @@ Las terapias del habla/logopedia, intervención conductual aplicada (ABA), el Pr
 - [`VSEncounterClassAtencion`](ValueSet-vs-encounter-class-atencion.html)
 
 #### Instancias de Ejemplo
+- [`Bundle/bundle-registro-integral-01`](Bundle-bundle-registro-integral-01.html): Bundle transaccional consolidado con todos los recursos de ejemplo de la Guía de Implementación.
 - [`Organization/centro-terapia-autismo`](Organization-centro-terapia-autismo.html): Centro Integral de Neurodesarrollo y Autismo.
 - [`Patient/paciente-pediatrico`](Patient-paciente-pediatrico.html): Paciente pediátrico Carlos Gómez Pérez.
 - [`Condition/diag-tea-cie10-cie11`](Condition-diag-tea-cie10-cie11.html): Diagnóstico de TEA (`F84.0` / `6A02.2`).

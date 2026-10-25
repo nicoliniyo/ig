@@ -1,0 +1,8 @@
+# Exclude everything by default
+*
+
+# Re-include only what the image build needs
+!output
+!Dockerfile
+!default.conf
+!mime.types
