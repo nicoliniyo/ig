@@ -1,1 +1,0 @@
-PackageList: http://hl7.org/fhir/uv/shorthand/package-list.json

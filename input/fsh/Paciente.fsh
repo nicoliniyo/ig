@@ -3,7 +3,6 @@ Parent: Patient
 Id: patientgeneric-id
 Title: "Paciente Genérico"
 Description: "Perfil de Paciente Genérico de HL7 Core Online que incluye nacionalidad, tipo de documento, nombre oficial con apellido materno, nombre social, contacto e idioma."
-* ^url = "https://hl7core.online/fhir/StructureDefinition/PacienteGenerico"
 * ^version = "3.0.0-ballot"
 * ^status = #active
 * ^date = "2026-10-21"
@@ -80,8 +79,10 @@ Description: "Perfil de Paciente Genérico de HL7 Core Online que incluye nacion
 * contact.name.given 1..* MS
 
 * communication MS
-* communication.language MS
+* communication.language 1..1 MS
 * communication.language from ValueSetIdiomas (required)
+* communication.preferred MS
+* communication.preferred ^short = "Indica el idioma principal / primera lengua del paciente (true = primera lengua)"
 
 * generalPractitioner only Reference(Organization or Practitioner)
 * generalPractitioner MS

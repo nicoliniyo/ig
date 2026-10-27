@@ -35,7 +35,7 @@ Description: "Extensión para tipificar documentos de identidad en recursos como
 Extension: Idioma
 Id: idioma
 Title: "Idioma"
-Description: "Especifica idiomas adicionales o preferencias de comunicación basados en BCP-47."
+Description: "Especifica el idioma principal (primera lengua) o preferencias de comunicación basados en BCP-47, para recursos que no disponen del elemento nativo communication (ej. Organization)."
 * ^url = "https://hl7core.online/fhir/StructureDefinition/idioma"
 * ^version = "3.0.0-ballot"
 * ^status = #active
@@ -44,9 +44,11 @@ Description: "Especifica idiomas adicionales o preferencias de comunicación bas
 * ^context[=].expression = "Patient"
 * ^context[+].type = #element
 * ^context[=].expression = "Practitioner"
+* ^context[+].type = #element
+* ^context[=].expression = "Organization"
 * value[x] only CodeableConcept
 * valueCodeableConcept from ValueSetIdiomas (required)
-* valueCodeableConcept ^short = "Código de idioma (BCP-47)"
+* valueCodeableConcept ^short = "Código de idioma principal / primera lengua (BCP-47)"
 
 Extension: ApellidoMaterno
 Id: ApellidoMaterno
@@ -80,7 +82,7 @@ Extension: PatMothersMaidenName
 Id: patient-mothersMaidenName
 Title: "Patient Mother's Maiden Name"
 Description: "Mother's maiden (unmarried) name, commonly collected to help verify patient identity."
-* ^url = "http://hl7.org/fhir/uv/shorthand/StructureDefinition/patient-mothersMaidenName"
+* ^url = "https://hl7core.online/fhir/StructureDefinition/patient-mothersMaidenName"
 * ^version = "3.0.0-ballot"
 * ^experimental = false
 * ^publisher = "HL7 CORE - FHIR"

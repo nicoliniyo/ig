@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
-  <id value="hl7.fhir.uv.shorthand"/>
-  <url value="http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand"/>
+  <id value="online.hl7core.fhir"/>
+  <url value="https://hl7core.online/fhir/ImplementationGuide/online.hl7core.fhir"/>
   <version value="3.0.0-ballot"/>
   <name value="FHIRShorthand"/>
   <title value="FHIR CORE Comunidad Online"/>
@@ -22,7 +22,7 @@
       <display value="World"/>
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.uv.shorthand"/>
+  <packageId value="online.hl7core.fhir"/>
   <fhirVersion value="4.0.1"/>
   <definition>
     <!-- Perfiles Clínicos y Administrativos -->
@@ -214,7 +214,7 @@
       </reference>
       <name value="Ejemplo Patient - Paciente Pediátrico (Carlos Gómez)"/>
       <description value="Paciente pediátrico con nacionalidad, documento de identidad, apellido materno e idioma español."/>
-      <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/PacienteGenerico"/>
+      <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/patientgeneric-id"/>
     </resource>
     <resource>
       <reference>

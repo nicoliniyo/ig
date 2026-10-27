@@ -10,6 +10,8 @@ Description: "Perfil para representar hospitales, clínicas de urgencias, farmac
 * ^version = "3.0.0-ballot"
 * ^status = #active
 * ^publisher = "HL7 CORE - FHIR"
+* extension contains Idioma named idioma 0..1 MS
+* extension[idioma] ^short = "Idioma principal / primera lengua de atención de la institución"
 * identifier 1..* MS
 * identifier ^short = "Identificadores fiscales o código nacional de prestador de salud (ej. REPS, RETHUS, NPI)"
 * active 1..1 MS

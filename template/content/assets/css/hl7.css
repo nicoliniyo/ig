@@ -2,7 +2,7 @@
 :root {
   --navbar-bg-color: #505050; /* 2. Header container color */
   --footer-bg-color: #707070; /* 3. Footer background color*/
-  --footer-container-bg-color: #505050; /* 4. Footer container color */
+  --footer-container-color: #505050; /* 4. Footer container color */
   --btn-hover-color: #808080;  /* 6. Menu button hover color */
 }
 
@@ -17,7 +17,7 @@
 
 #hl7-nav {
   line-height: 50px;
-  float: left;
+  float: var(--ig-left);
   margin-top: 4px;
 }
 
@@ -26,28 +26,17 @@
 }
 
 #hl7-logo {
-  float: left;
+  float: var(--ig-left);
   margin-left: 6px;
 }
 #hl7-search {
   line-height: 50px;
-  float: right;
+  float: var(--ig-right);
   margin-top: 4px;
   color: maroon;
 }
 #hl7-search a {
   color: inherit;
-}
-#project-nav {
-  line-height: 50px;
-  float: left;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  color: #808080;
-}
-#project-logo {
-  float: left;
-  margin-left: 3px;
 }
 
 /* ----------note-to-balloters styling------*/

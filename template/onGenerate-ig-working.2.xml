@@ -1,32 +1,32 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="hl7.fhir.uv.shorthand"/>
+   <id value="online.hl7core.fhir"/>
    <language value="en"/>
    <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
          <p class="res-header-id">
-            <b>Generated Narrative: ImplementationGuide hl7.fhir.uv.shorthand</b>
+            <b>Generated Narrative: ImplementationGuide online.hl7core.fhir</b>
          </p>
-         <a name="hl7.fhir.uv.shorthand"> </a>
-         <a name="hchl7.fhir.uv.shorthand"> </a>
+         <a name="online.hl7core.fhir"> </a>
+         <a name="hconline.hl7core.fhir"> </a>
          <div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%">
             <p style="margin-bottom: 0px">Language: en</p>
          </div>
          <h2>FHIRShorthand</h2>
          <p>The official URL for this implementation guide is: </p>
-         <pre>http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand</pre>
+         <pre>https://hl7core.online/fhir/ImplementationGuide/online.hl7core.fhir</pre>
          <div>
             <p>Guía de Implementación de HL7 Core Online en FHIR R4 que incluye artefactos base (Países, Documentos, Idiomas, Paciente) y el flujo clínico para visitas médicas generales, emergencias, recetas farmacológicas y prescripción de terapias de neurodesarrollo (TEA, Logopedia, ABA, Son-Rise y Montessori) con codificación dual CIE-10 / CIE-11.</p>
          </div>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/shorthand/ImplementationGuide/hl7.fhir.uv.shorthand"/>
+   <url value="https://hl7core.online/fhir/ImplementationGuide/online.hl7core.fhir"/>
    <version value="3.0.0-ballot"/>
    <name value="FHIRShorthand"/>
    <title value="FHIR CORE Comunidad Online"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2026-10-23T10:07:55-04:00"/>
+   <date value="2026-10-26T15:16:08-04:00"/>
    <publisher value="HL7 CORE - FHIR"/>
    <contact>
       <telecom>
@@ -42,7 +42,7 @@
          <display value="World"/>
       </coding>
    </jurisdiction>
-   <packageId value="hl7.fhir.uv.shorthand"/>
+   <packageId value="online.hl7core.fhir"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
    <dependsOn id="hl7tx">
@@ -833,7 +833,7 @@
          </reference>
          <name value="Ejemplo Patient - Paciente Pediátrico (Carlos Gómez)"/>
          <description value="Paciente pediátrico con nacionalidad, documento de identidad, apellido materno e idioma español."/>
-         <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/PacienteGenerico"/>
+         <exampleCanonical value="https://hl7core.online/fhir/StructureDefinition/patientgeneric-id"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>

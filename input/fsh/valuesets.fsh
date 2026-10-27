@@ -50,7 +50,6 @@ ValueSet: ValueSetTiposDocumentos
 Id: valueSetTiposDocumentos
 Title: "Tipos de Documentos"
 Description: "Tipos de Documentos para identificación según tabla HL7 V3 / HL7 v2 (0203) y CodeSystem local."
-* ^url = "https://hl7core.online/fhir/ValueSet/ValueSetTiposDocumentos"
 * ^version = "3.0.0-ballot"
 * ^status = #active
 * ^experimental = false
@@ -109,9 +108,9 @@ Description: "Códigos clínicos de SNOMED CT y CodeSystem local para terapias d
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 CORE - FHIR"
-* $SCT#409063005 "Speech therapy (logopedia)"
-* $SCT#708035003 "Applied behavior analysis (ABA)"
-* $SCT#385800005 "Sensory integration therapy"
+* $SCT#5154007 "Speech therapy"
+* $SCT#166001 "Behavioral therapy"
+* $SCT#228533008 "Sensory integration technique"
 * $SCT#229065009 "Exercise therapy"
 * include codes from system CodeSystemTerapiasDesarrollo
 

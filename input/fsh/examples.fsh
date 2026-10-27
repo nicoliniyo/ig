@@ -6,6 +6,7 @@ InstanceOf: PerfilOrganizationClinica
 Usage: #example
 Title: "Ejemplo Organization - Centro Integral de Neurodesarrollo y Autismo"
 Description: "Institución prestadora de servicios de salud especializada en evaluación clínica, urgencias pediátricas y terapias de neurodesarrollo (ABA, Logopedia, Son-Rise, Montessori)."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilOrganizationClinica"
 * identifier[0].system = "http://minsalud.gob/registro-prestadores"
 * identifier[=].value = "IPS-987654321"
 * active = true
@@ -33,12 +34,13 @@ InstanceOf: PacienteGenerico
 Usage: #example
 Title: "Ejemplo Patient - Paciente Pediátrico (Carlos Gómez)"
 Description: "Paciente pediátrico con nacionalidad, documento de identidad, apellido materno e idioma español."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/patientgeneric-id"
 * extension[nacionalidad].valueCodeableConcept = CodeSystemPaises#068 "Bolivia (Plurinational State of)"
 * identifier[0].use = #official
 * identifier[=].type.extension[paises].valueCodeableConcept = CodeSystemPaises#068 "Bolivia (Plurinational State of)"
 * identifier[=].type.coding[0].system = $V20203
 * identifier[=].type.coding[=].code = #NNBOL
-* identifier[=].type.coding[=].display = "Cédula de Identidad Bolivia"
+* identifier[=].type.coding[=].display = "National Identifier for Bolivia, Plurinational State of"
 * identifier[=].system = "http://segip.gob.bo/ci"
 * identifier[=].value = "12345678"
 * name[NombreOficial].use = #official
@@ -72,6 +74,7 @@ InstanceOf: PerfilConditionCieDual
 Usage: #example
 Title: "Ejemplo Condition - Diagnóstico de TEA con CIE-10 (F84.0) y CIE-11 (6A02.2)"
 Description: "Diagnóstico principal de Trastorno del Espectro Autista codificado simultáneamente en CIE-10 y CIE-11."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilConditionCieDual"
 * clinicalStatus.coding[0].system = $CondClinical
 * clinicalStatus.coding[=].code = #active
 * clinicalStatus.coding[=].display = "Active"
@@ -83,10 +86,10 @@ Description: "Diagnóstico principal de Trastorno del Espectro Autista codificad
 * category[=].coding[=].display = "Encounter Diagnosis"
 * code.coding[cie10].system = $ICD10
 * code.coding[cie10].code = #F84.0
-* code.coding[cie10].display = "Autismo en la niñez"
+* code.coding[cie10].display = "Childhood autism"
 * code.coding[cie11].system = $ICD11
 * code.coding[cie11].code = #6A02.2
-* code.coding[cie11].display = "Trastorno del espectro autista sin trastorno del desarrollo intelectual y con deterioro del lenguaje funcional"
+* code.coding[cie11].display = "Autism spectrum disorder without disorder of intellectual development and with impaired functional language"
 * code.text = "Trastorno del Espectro Autista (TEA)"
 * subject.reference = "Patient/paciente-pediatrico"
 * subject.display = "Carlos Gómez"
@@ -98,6 +101,7 @@ InstanceOf: PerfilConditionCieDual
 Usage: #example
 Title: "Ejemplo Condition - Trastorno del Lenguaje con CIE-10 (F80.9) y CIE-11 (6A01.2)"
 Description: "Diagnóstico secundario de trastorno del desarrollo del habla y del lenguaje para justificar sesiones de logopedia."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilConditionCieDual"
 * clinicalStatus.coding[0].system = $CondClinical
 * clinicalStatus.coding[=].code = #active
 * clinicalStatus.coding[=].display = "Active"
@@ -109,10 +113,10 @@ Description: "Diagnóstico secundario de trastorno del desarrollo del habla y de
 * category[=].coding[=].display = "Encounter Diagnosis"
 * code.coding[cie10].system = $ICD10
 * code.coding[cie10].code = #F80.9
-* code.coding[cie10].display = "Trastorno del desarrollo del habla y del lenguaje no especificado"
+* code.coding[cie10].display = "Developmental disorder of speech and language, unspecified"
 * code.coding[cie11].system = $ICD11
 * code.coding[cie11].code = #6A01.2
-* code.coding[cie11].display = "Trastorno del desarrollo del lenguaje con deterioro del lenguaje expresivo y receptivo"
+* code.coding[cie11].display = "Developmental language disorder"
 * code.text = "Trastorno del desarrollo del lenguaje"
 * subject.reference = "Patient/paciente-pediatrico"
 * subject.display = "Carlos Gómez"
@@ -127,6 +131,7 @@ InstanceOf: PerfilEncounterAtencion
 Usage: #example
 Title: "Ejemplo Encounter - Consulta Médica Ambulatoria (AMB)"
 Description: "Registro de consulta médica ambulatoria de evaluación pediátrica y neurodesarrollo."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilEncounterAtencion"
 * status = #finished
 * class = $ActCode#AMB "ambulatory"
 * priority.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
@@ -154,6 +159,7 @@ InstanceOf: PerfilEncounterAtencion
 Usage: #example
 Title: "Ejemplo Encounter - Atención Médica de Emergencia (EMER)"
 Description: "Registro de un episodio de atención de urgencia/emergencia pediátrica."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilEncounterAtencion"
 * status = #in-progress
 * class = $ActCode#EMER "emergency"
 * priority.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
@@ -165,7 +171,7 @@ Description: "Registro de un episodio de atención de urgencia/emergencia pediá
 * period.start = "2026-10-21T18:30:00-04:00"
 * reasonCode[0].coding[0].system = $ICD10
 * reasonCode[=].coding[=].code = #R50.9
-* reasonCode[=].coding[=].display = "Fiebre, no especificada"
+* reasonCode[=].coding[=].display = "Fever, unspecified"
 * reasonCode[=].text = "Fiebre aguda y agitación psicomotriz en servicio de urgencias"
 * diagnosis[0].condition.reference = "Condition/diag-tea-cie10-cie11"
 * diagnosis[=].condition.display = "Autismo en la niñez (CIE-10 F84.0)"
@@ -181,6 +187,7 @@ InstanceOf: PerfilMedicationRequestDosis
 Usage: #example
 Title: "Ejemplo MedicationRequest - Receta Farmacológica con Dosificación"
 Description: "Prescripción médica detallando medicamento, dosis exacta, vía oral, frecuencia cada 8 horas y condición de uso."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilMedicationRequestDosis"
 * status = #active
 * intent = #order
 * priority = #routine
@@ -221,15 +228,16 @@ InstanceOf: PerfilServiceRequestTerapias
 Usage: #example
 Title: "Ejemplo ServiceRequest - Orden de Logopedia / Terapia del Habla"
 Description: "Orden médica para sesiones de logopedia/terapia del habla referenciando simultáneamente los diagnósticos de TEA y Trastorno del Lenguaje en CIE-10 y CIE-11."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilServiceRequestTerapias"
 * status = #active
 * intent = #order
 * category[0].coding[0].system = $SCT
-* category[=].coding[=].code = #409063005
-* category[=].coding[=].display = "Counseling/Therapy procedure"
+* category[=].coding[=].code = #166001
+* category[=].coding[=].display = "Behavioral therapy"
 * priority = #routine
 * code.coding[0].system = $SCT
-* code.coding[=].code = #409063005
-* code.coding[=].display = "Speech therapy (logopedia)"
+* code.coding[=].code = #5154007
+* code.coding[=].display = "Speech therapy"
 * code.text = "Sesiones de Logopedia / Terapia del habla y lenguaje"
 * quantityQuantity.value = 72
 * quantityQuantity.unit = "sesiones"
@@ -254,15 +262,16 @@ InstanceOf: PerfilServiceRequestTerapias
 Usage: #example
 Title: "Ejemplo ServiceRequest - Orden de Terapia ABA, Son-Rise y Estimulación Montessori"
 Description: "Orden clínica para intervención conductual aplicada (ABA) combinada con estrategias del Programa Son-Rise y estimulación sensorial Montessori."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilServiceRequestTerapias"
 * status = #active
 * intent = #order
 * category[0].coding[0].system = $SCT
-* category[=].coding[=].code = #409063005
-* category[=].coding[=].display = "Counseling/Therapy procedure"
+* category[=].coding[=].code = #166001
+* category[=].coding[=].display = "Behavioral therapy"
 * priority = #routine
 * code.coding[0].system = $SCT
-* code.coding[=].code = #708035003
-* code.coding[=].display = "Applied behavior analysis (ABA)"
+* code.coding[=].code = #166001
+* code.coding[=].display = "Behavioral therapy"
 * code.coding[+].system = $CodeSystemTerapias
 * code.coding[=].code = #son-rise
 * code.coding[=].display = "Programa Son-Rise"
@@ -279,8 +288,8 @@ Description: "Orden clínica para intervención conductual aplicada (ABA) combin
 * occurrenceTiming.repeat.period = 1
 * occurrenceTiming.repeat.periodUnit = #wk
 * performerType.coding[0].system = $SCT
-* performerType.coding[=].code = #446701002
-* performerType.coding[=].display = "Behavior analyst"
+* performerType.coding[=].code = #59944000
+* performerType.coding[=].display = "Psychologist"
 * performer[0].reference = "Organization/centro-terapia-autismo"
 * performer[=].display = "Centro Integral de Neurodesarrollo y Autismo"
 * reasonReference[0].reference = "Condition/diag-tea-cie10-cie11"
@@ -294,6 +303,7 @@ InstanceOf: PerfilBundleRegistroIntegral
 Usage: #example
 Title: "Ejemplo Bundle - Registro Integral Consolidado (Organización, Paciente, Encuentros, Diagnósticos, Receta y Terapias)"
 Description: "Bundle transaccional que consolida todos los recursos de ejemplo de la Guía de Implementación (Organization, Patient, Condition CIE-10/CIE-11, Encounter AMB y EMER, MedicationRequest y ServiceRequest de terapias) en una sola operación de registro."
+* meta.profile[0] = "https://hl7core.online/fhir/StructureDefinition/PerfilBundleRegistroIntegral"
 * identifier.system = "https://hl7core.online/fhir/bundle-identifier"
 * identifier.value = "REG-INTEGRAL-2026-0001"
 * type = #transaction

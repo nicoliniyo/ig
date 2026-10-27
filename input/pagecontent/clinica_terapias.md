@@ -1,12 +1,12 @@
 {%include styles.html%}
 
-## Recursos FHIR R4 para Clínicas, Emergencias y Terapias de Neurodesarrollo
+### Recursos FHIR R4 para Clínicas, Emergencias y Terapias de Neurodesarrollo
 
 En FHIR R4, el registro de una consulta clínica general o de emergencia, la prescripción farmacológica con dosificación estructurada y la indicación de terapias de desarrollo o neurorehabilitación (Trastorno del Espectro Autista - TEA, Logopedia/Terapia del habla, Análisis Conductual Aplicado - ABA, Programa Son-Rise y estimulación Montessori) se modelan combinando recursos administrativos, clínicos y de solicitud de servicios.
 
 ---
 
-### 1. Registro de la Visita Médica Genérica y Casos de Emergencia
+#### 1. Registro de la Visita Médica Genérica y Casos de Emergencia
 
 | Recurso | Propósito y Elementos Clave |
 | :--- | :--- |
@@ -18,7 +18,7 @@ En FHIR R4, el registro de una consulta clínica general o de emergencia, la pre
 
 ---
 
-### 2. Integración del Recurso `Organization` en el Flujo Clínico
+#### 2. Integración del Recurso `Organization` en el Flujo Clínico
 
 El recurso **`Organization`** ([`PerfilOrganizationClinica`](StructureDefinition-PerfilOrganizationClinica.html)) representa a la institución, clínica, centro terapéutico, hospital o departamento que brinda el servicio o gestiona la atención:
 
@@ -38,7 +38,7 @@ El recurso **`Organization`** ([`PerfilOrganizationClinica`](StructureDefinition
 
 ---
 
-### 3. Diagnósticos con Codificación Dual CIE-10 y CIE-11 (`Condition`)
+#### 3. Diagnósticos con Codificación Dual CIE-10 y CIE-11 (`Condition`)
 
 En FHIR R4, el elemento `code` dentro de `Condition` es de tipo `CodeableConcept`, lo que permite incluir múltiples codificaciones (`coding`) en el mismo recurso. El perfil [`PerfilConditionCieDual`](StructureDefinition-PerfilConditionCieDual.html) define un *slicing* sobre `Condition.code.coding` que garantiza la coexistencia de **CIE-10** y **CIE-11** usando el ValueSet [`VSCIEAutismoYLenguaje`](ValueSet-vs-cie-autismo-lenguaje.html):
 
@@ -49,7 +49,7 @@ En FHIR R4, el elemento `code` dentro de `Condition` es de tipo `CodeableConcept
 
 ---
 
-### 4. Recetas de Medicamentos y Dosificación (`MedicationRequest`)
+#### 4. Recetas de Medicamentos y Dosificación (`MedicationRequest`)
 
 Para prescribir fármacos en consulta general o en urgencias se utiliza **`MedicationRequest`** ([`PerfilMedicationRequestDosis`](StructureDefinition-PerfilMedicationRequestDosis.html)):
 
@@ -66,7 +66,7 @@ Para prescribir fármacos en consulta general o en urgencias se utiliza **`Medic
 
 ---
 
-### 5. Prescripción de Terapias no Farmacológicas: Autismo, Logopedia, ABA, Son-Rise y Montessori (`ServiceRequest`)
+#### 5. Prescripción de Terapias no Farmacológicas: Autismo, Logopedia, ABA, Son-Rise y Montessori (`ServiceRequest`)
 
 Las terapias del habla/logopedia, intervención conductual aplicada (ABA), el Programa Son-Rise o los enfoques pedagógicos/terapéuticos adaptados (Montessori) se modelan a través de solicitudes de servicios clínicos mediante **`ServiceRequest`** ([`PerfilServiceRequestTerapias`](StructureDefinition-PerfilServiceRequestTerapias.html)):
 
@@ -82,7 +82,7 @@ Las terapias del habla/logopedia, intervención conductual aplicada (ABA), el Pr
 
 ---
 
-### 6. Consolidación y Registro Transaccional Integral (`Bundle`)
+#### 6. Consolidación y Registro Transaccional Integral (`Bundle`)
 
 El perfil [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegistroIntegral.html) (`type = #transaction`) consolida todos los perfiles de la Guía de Implementación en un solo paquete transaccional mediante *slicing* por perfil sobre `Bundle.entry.resource`:
 
@@ -95,9 +95,9 @@ El perfil [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegis
 
 ---
 
-### 7. Índice de Artefactos y Ejemplos Incluidos
+#### 7. Índice de Artefactos y Ejemplos Incluidos
 
-#### Perfiles (`StructureDefinition`)
+##### Perfiles (`StructureDefinition`)
 - [`PacienteGenerico`](StructureDefinition-patientgeneric-id.html): Perfil de Paciente de HL7 Core Online.
 - [`PerfilOrganizationClinica`](StructureDefinition-PerfilOrganizationClinica.html): Perfil de Institución Clínica y Centro Terapéutico.
 - [`PerfilEncounterAtencion`](StructureDefinition-PerfilEncounterAtencion.html): Perfil de Consulta Ambulatoria (`AMB`) y Emergencias (`EMER`).
@@ -106,14 +106,14 @@ El perfil [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegis
 - [`PerfilServiceRequestTerapias`](StructureDefinition-PerfilServiceRequestTerapias.html): Perfil de Orden de Terapias de Neurodesarrollo y Lenguaje.
 - [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegistroIntegral.html): Perfil Bundle Transaccional de Registro Integral Consolidado.
 
-#### Extensiones (`StructureDefinition`)
+##### Extensiones (`StructureDefinition`)
 - [`Nacionalidad`](StructureDefinition-nacionalidad.html) (`https://hl7core.online/fhir/StructureDefinition/nacionalidad`)
 - [`TipoDocumento`](StructureDefinition-tipo-documento.html) (`https://hl7core.online/fhir/StructureDefinition/tipo-documento`)
 - [`Idioma`](StructureDefinition-idioma.html) (`https://hl7core.online/fhir/StructureDefinition/idioma`)
 - [`ApellidoMaterno`](StructureDefinition-ApellidoMaterno.html) (`https://hl7core.online/fhir/StructureDefinition/ApellidoMaterno`)
 - [`IdContacto`](StructureDefinition-IdContacto.html) (`https://hl7core.online/fhir/StructureDefinition/IdContacto`)
 
-#### ValueSets y CodeSystems
+##### ValueSets y CodeSystems
 - [`ValueSetTiposDocumentos`](ValueSet-valueSetTiposDocumentos.html) y [`CodeSystemV20203`](CodeSystem-v2-0203.html)
 - [`ValueSetIdiomas`](ValueSet-idiomas.html)
 - [`ValueSetPaises`](ValueSet-valueset-paises.html) y [`CodeSystemPaises`](CodeSystem-codesystem-paises.html)
@@ -121,7 +121,7 @@ El perfil [`PerfilBundleRegistroIntegral`](StructureDefinition-PerfilBundleRegis
 - [`VSCIEAutismoYLenguaje`](ValueSet-vs-cie-autismo-lenguaje.html)
 - [`VSEncounterClassAtencion`](ValueSet-vs-encounter-class-atencion.html)
 
-#### Instancias de Ejemplo
+##### Instancias de Ejemplo
 - [`Bundle/bundle-registro-integral-01`](Bundle-bundle-registro-integral-01.html): Bundle transaccional consolidado con todos los recursos de ejemplo de la Guía de Implementación.
 - [`Organization/centro-terapia-autismo`](Organization-centro-terapia-autismo.html): Centro Integral de Neurodesarrollo y Autismo.
 - [`Patient/paciente-pediatrico`](Patient-paciente-pediatrico.html): Paciente pediátrico Carlos Gómez Pérez.
